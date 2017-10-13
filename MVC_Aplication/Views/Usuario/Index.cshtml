@@ -1,0 +1,81 @@
+﻿@model IEnumerable<MVC_Aplication.Models.SYS_USUARIO>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PK_ID_SYS_USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SYS_USU_TIPOIDENTIFICACION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SYS_USU_IDENTIFICACION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SYS_USU_NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SYS_USU_APELLIDO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SYS_USU_USERNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SYS_USU_CLAVE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PK_ID_GEN_PERFIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SYS_USU_CORREOUSUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SYS_USU_ACTIVO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PK_ID_SYS_USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SYS_USU_TIPOIDENTIFICACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SYS_USU_IDENTIFICACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SYS_USU_NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SYS_USU_APELLIDO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SYS_USU_USERNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SYS_USU_CLAVE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PK_ID_GEN_PERFIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SYS_USU_CORREOUSUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SYS_USU_ACTIVO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK_ID_SYS_USUARIO  }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.PK_ID_SYS_USUARIO  }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK_ID_SYS_USUARIO  })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,98 @@
+﻿@model MVC_Aplication.Models.SYS_USUARIO
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SYS_USUARIO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PK_ID_SYS_USUARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PK_ID_SYS_USUARIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_TIPOIDENTIFICACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_TIPOIDENTIFICACION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_IDENTIFICACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_IDENTIFICACION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_APELLIDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_APELLIDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_USERNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_USERNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PK_ID_GEN_PERFIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PK_ID_GEN_PERFIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_CORREOUSUARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_CORREOUSUARIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_ACTIVO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_ACTIVO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

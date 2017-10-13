@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RVDESAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CON_RESP_TRIBUTARIA">
+          <Key>
+            <PropertyRef Name="PK_COD_CONT_RESP" />
+          </Key>
+          <Property Name="PK_COD_CONT_RESP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CONT_COD_RESP" Type="varchar" MaxLength="2" />
+          <Property Name="CONR_NOMBRE_RESP" Type="varchar" MaxLength="200" />
+          <Property Name="CON_RES_ACTIVO" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYS_USUARIO">
+          <Key>
+            <PropertyRef Name="PK_ID_SYS_USUARIO" />
+          </Key>
+          <Property Name="PK_ID_SYS_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SYS_USU_TIPOIDENTIFICACION" Type="int" />
+          <Property Name="SYS_USU_IDENTIFICACION" Type="varchar" MaxLength="15" />
+          <Property Name="SYS_USU_NOMBRE" Type="varchar" MaxLength="70" />
+          <Property Name="SYS_USU_APELLIDO" Type="varchar" MaxLength="70" />
+          <Property Name="SYS_USU_USERNAME" Type="varchar" MaxLength="70" />
+          <Property Name="SYS_USU_CLAVE" Type="varchar" MaxLength="1000" />
+          <Property Name="PK_ID_GEN_PERFIL" Type="varchar" MaxLength="10" />
+          <Property Name="SYS_USU_CORREOUSUARIO" Type="varchar" MaxLength="100" />
+          <Property Name="SYS_USU_ACTIVO" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="RVDESAModelStoreContainer">
+          <EntitySet Name="CON_RESP_TRIBUTARIA" EntityType="Self.CON_RESP_TRIBUTARIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_USUARIO" EntityType="Self.SYS_USUARIO" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RVDESAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SYS_USUARIO">
+          <Key>
+            <PropertyRef Name="PK_ID_SYS_USUARIO" />
+          </Key>
+          <Property Name="PK_ID_SYS_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SYS_USU_TIPOIDENTIFICACION" Type="Int32" />
+          <Property Name="SYS_USU_IDENTIFICACION" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="SYS_USU_NOMBRE" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="SYS_USU_APELLIDO" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="SYS_USU_USERNAME" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="SYS_USU_CLAVE" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="PK_ID_GEN_PERFIL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SYS_USU_CORREOUSUARIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SYS_USU_ACTIVO" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="RVDESAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SYS_USUARIO" EntityType="Self.SYS_USUARIO" />
+          <EntitySet Name="CON_RESP_TRIBUTARIA" EntityType="RVDESAModel.CON_RESP_TRIBUTARIA" />
+        </EntityContainer>
+        <EntityType Name="CON_RESP_TRIBUTARIA">
+          <Key>
+            <PropertyRef Name="PK_COD_CONT_RESP" />
+          </Key>
+          <Property Name="PK_COD_CONT_RESP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CONT_COD_RESP" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CONR_NOMBRE_RESP" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CON_RES_ACTIVO" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RVDESAModelStoreContainer" CdmEntityContainer="RVDESAEntities">
+          <EntitySetMapping Name="SYS_USUARIO">
+            <EntityTypeMapping TypeName="RVDESAModel.SYS_USUARIO">
+              <MappingFragment StoreEntitySet="SYS_USUARIO">
+                <ScalarProperty Name="PK_ID_SYS_USUARIO" ColumnName="PK_ID_SYS_USUARIO" />
+                <ScalarProperty Name="SYS_USU_TIPOIDENTIFICACION" ColumnName="SYS_USU_TIPOIDENTIFICACION" />
+                <ScalarProperty Name="SYS_USU_IDENTIFICACION" ColumnName="SYS_USU_IDENTIFICACION" />
+                <ScalarProperty Name="SYS_USU_NOMBRE" ColumnName="SYS_USU_NOMBRE" />
+                <ScalarProperty Name="SYS_USU_APELLIDO" ColumnName="SYS_USU_APELLIDO" />
+                <ScalarProperty Name="SYS_USU_USERNAME" ColumnName="SYS_USU_USERNAME" />
+                <ScalarProperty Name="SYS_USU_CLAVE" ColumnName="SYS_USU_CLAVE" />
+                <ScalarProperty Name="PK_ID_GEN_PERFIL" ColumnName="PK_ID_GEN_PERFIL" />
+                <ScalarProperty Name="SYS_USU_CORREOUSUARIO" ColumnName="SYS_USU_CORREOUSUARIO" />
+                <ScalarProperty Name="SYS_USU_ACTIVO" ColumnName="SYS_USU_ACTIVO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CON_RESP_TRIBUTARIA">
+            <EntityTypeMapping TypeName="RVDESAModel.CON_RESP_TRIBUTARIA">
+              <MappingFragment StoreEntitySet="CON_RESP_TRIBUTARIA">
+                <ScalarProperty Name="CON_RES_ACTIVO" ColumnName="CON_RES_ACTIVO" />
+                <ScalarProperty Name="CONR_NOMBRE_RESP" ColumnName="CONR_NOMBRE_RESP" />
+                <ScalarProperty Name="CONT_COD_RESP" ColumnName="CONT_COD_RESP" />
+                <ScalarProperty Name="PK_COD_CONT_RESP" ColumnName="PK_COD_CONT_RESP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

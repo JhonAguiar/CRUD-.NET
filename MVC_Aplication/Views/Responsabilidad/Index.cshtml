@@ -1,0 +1,44 @@
+﻿@model MVC_Aplication.Models.CON_RESP_TRIBUTARIA
+
+<div>
+    <h4>CON_RESP_TRIBUTARIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PK_COD_CONT_RESP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PK_COD_CONT_RESP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONT_COD_RESP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONT_COD_RESP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONR_NOMBRE_RESP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONR_NOMBRE_RESP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CON_RES_ACTIVO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CON_RES_ACTIVO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RVDESAModelStoreContainer" CdmEntityContainer="RVDESAEntities">
+    <EntitySetMapping Name="SYS_USUARIO">
+      <EntityTypeMapping TypeName="RVDESAModel.SYS_USUARIO">
+        <MappingFragment StoreEntitySet="SYS_USUARIO">
+          <ScalarProperty Name="PK_ID_SYS_USUARIO" ColumnName="PK_ID_SYS_USUARIO" />
+          <ScalarProperty Name="SYS_USU_TIPOIDENTIFICACION" ColumnName="SYS_USU_TIPOIDENTIFICACION" />
+          <ScalarProperty Name="SYS_USU_IDENTIFICACION" ColumnName="SYS_USU_IDENTIFICACION" />
+          <ScalarProperty Name="SYS_USU_NOMBRE" ColumnName="SYS_USU_NOMBRE" />
+          <ScalarProperty Name="SYS_USU_APELLIDO" ColumnName="SYS_USU_APELLIDO" />
+          <ScalarProperty Name="SYS_USU_USERNAME" ColumnName="SYS_USU_USERNAME" />
+          <ScalarProperty Name="SYS_USU_CLAVE" ColumnName="SYS_USU_CLAVE" />
+          <ScalarProperty Name="PK_ID_GEN_PERFIL" ColumnName="PK_ID_GEN_PERFIL" />
+          <ScalarProperty Name="SYS_USU_CORREOUSUARIO" ColumnName="SYS_USU_CORREOUSUARIO" />
+          <ScalarProperty Name="SYS_USU_ACTIVO" ColumnName="SYS_USU_ACTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CON_RESP_TRIBUTARIA">
+      <EntityTypeMapping TypeName="RVDESAModel.CON_RESP_TRIBUTARIA">
+        <MappingFragment StoreEntitySet="CON_RESP_TRIBUTARIA">
+          <ScalarProperty Name="CON_RES_ACTIVO" ColumnName="CON_RES_ACTIVO" />
+          <ScalarProperty Name="CONR_NOMBRE_RESP" ColumnName="CONR_NOMBRE_RESP" />
+          <ScalarProperty Name="CONT_COD_RESP" ColumnName="CONT_COD_RESP" />
+          <ScalarProperty Name="PK_COD_CONT_RESP" ColumnName="PK_COD_CONT_RESP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

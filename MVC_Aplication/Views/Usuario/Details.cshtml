@@ -1,0 +1,92 @@
+﻿@model MVC_Aplication.Models.SYS_USUARIO
+
+<div>
+    <h4>SYS_USUARIO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PK_ID_SYS_USUARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PK_ID_SYS_USUARIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_TIPOIDENTIFICACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_TIPOIDENTIFICACION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_IDENTIFICACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_IDENTIFICACION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_APELLIDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_APELLIDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_USERNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_USERNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PK_ID_GEN_PERFIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PK_ID_GEN_PERFIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_CORREOUSUARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_CORREOUSUARIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SYS_USU_ACTIVO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SYS_USU_ACTIVO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

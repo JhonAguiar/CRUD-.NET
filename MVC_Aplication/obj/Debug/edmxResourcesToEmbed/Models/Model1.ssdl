@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RVDESAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CON_RESP_TRIBUTARIA">
+    <Key>
+      <PropertyRef Name="PK_COD_CONT_RESP" />
+    </Key>
+    <Property Name="PK_COD_CONT_RESP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CONT_COD_RESP" Type="varchar" MaxLength="2" />
+    <Property Name="CONR_NOMBRE_RESP" Type="varchar" MaxLength="200" />
+    <Property Name="CON_RES_ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityType Name="SYS_USUARIO">
+    <Key>
+      <PropertyRef Name="PK_ID_SYS_USUARIO" />
+    </Key>
+    <Property Name="PK_ID_SYS_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SYS_USU_TIPOIDENTIFICACION" Type="int" />
+    <Property Name="SYS_USU_IDENTIFICACION" Type="varchar" MaxLength="15" />
+    <Property Name="SYS_USU_NOMBRE" Type="varchar" MaxLength="70" />
+    <Property Name="SYS_USU_APELLIDO" Type="varchar" MaxLength="70" />
+    <Property Name="SYS_USU_USERNAME" Type="varchar" MaxLength="70" />
+    <Property Name="SYS_USU_CLAVE" Type="varchar" MaxLength="1000" />
+    <Property Name="PK_ID_GEN_PERFIL" Type="varchar" MaxLength="10" />
+    <Property Name="SYS_USU_CORREOUSUARIO" Type="varchar" MaxLength="100" />
+    <Property Name="SYS_USU_ACTIVO" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="RVDESAModelStoreContainer">
+    <EntitySet Name="CON_RESP_TRIBUTARIA" EntityType="Self.CON_RESP_TRIBUTARIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SYS_USUARIO" EntityType="Self.SYS_USUARIO" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
